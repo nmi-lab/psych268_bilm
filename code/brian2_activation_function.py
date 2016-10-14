@@ -19,10 +19,10 @@ from brian2 import *
 
 Cm = 50*pF; gl = 1e-9*siemens; taus = 20*ms
 Vt = 10*mV; Vr = 0*mV;
-sigma = 0./sqrt(ms)
+sigma = 0./sqrt(ms)*mV
 eqs = '''
 dv/dt  = - gl*v/Cm 
-         + sigma*xi*mV
+         + sigma*xi
          + iext/Cm : volt (unless refractory)
 iext : amp
 '''
